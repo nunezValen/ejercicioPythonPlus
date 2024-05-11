@@ -1,0 +1,12 @@
+A: Revisa si la linea enviada tiene al menos una conexion, de no hacerlo pone que no
+en la columna posee_conectividad del archivo csv, de tener almenos una conexion pone que sí.
+
+B: El write_file abre con open y por ello debe de luego cerrar con un close. Mientras
+que el read_dataset abre con with lo que hace que se abra al iniciar el with y cierra al terminar este.
+
+C: Pondria un try-except ya que esto permite que en caso de haber un error entra en el except.
+Para el primer except pondria FileNotFoundError por si no existe y en el segundo csv.Error.
+
+D: La clausula seria un else el cual de no haber excepciones se ejecuta.
+
+E: Es de tipo csv.DictReader.
